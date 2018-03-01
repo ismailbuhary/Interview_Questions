@@ -1,0 +1,17 @@
+
+String 1 =[abdc,bcad,abcd]
+String 2 =[bacd,abcd,cdab]
+
+Result : [Yes,No,No]
+
+
+
+String 1 =[abdc,bcad,abcd]
+String 2 =[bacd,abcd,badc]
+
+Result : [Yes,No,Yes]
+
+String 1 =[abdc,bcad,abcd]
+String 2 =[bacd,cbad,badc]
+
+Result : [Yes,Yes,Yes]
