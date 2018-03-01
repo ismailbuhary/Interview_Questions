@@ -1,0 +1,6 @@
+<H1>
+
+1. Chicken implements the IBase interface base class </br>
+2. A Chicken lays an egg that will hatch int new Chicken </br>
+3.Egg from other type of birds should hatch into a new bird of their parent type. </br>
+4.Hatchin an egg for the second time throws a illegalStateException.</br>
