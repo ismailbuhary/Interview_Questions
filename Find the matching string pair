@@ -12,6 +12,6 @@ String 2 =[bacd,abcd,badc]
 Result : [Yes,No,Yes]
 
 String 1 =[abdc,bcad,abcd]
-String 2 =[bacd,cbad,badc]
+String 2 =[bacd,cbda,badc]
 
 Result : [Yes,Yes,Yes]
