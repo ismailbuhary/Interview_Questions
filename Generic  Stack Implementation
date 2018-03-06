@@ -1,0 +1,52 @@
+import java.lang.reflect.Array;
+public class Stack<T>{
+    
+    
+    private int maxSize ;
+    private T[] StackArray;
+    private int top;
+    
+    
+       public Stack(int size) {
+           this.maxSize = size;
+       StackArray= (T[]) new Object[size];
+        top = -1;
+    }
+
+       
+    
+        public void push(T j){
+            if(!isFull()) {
+            top++;
+            StackArray[top]=j;
+            }
+        }
+    
+        public T pop(){
+          if(!isEmpty()) 
+            return StackArray[top--];  
+            return null;        
+        }
+    
+        public T peak(){
+            
+            return StackArray[top];
+        }
+        
+        public boolean isEmpty(){
+            return(top==-1);
+        }
+        
+        public boolean isFull(){
+            return top==(maxSize-1);   
+        }
+        
+        public void printStack(){
+         while(!this.isEmpty()){
+         System.out.println(this.pop());
+            }
+        }
+    
+    
+    
+    }
