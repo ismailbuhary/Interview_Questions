@@ -1,0 +1,95 @@
+import java.lang.String;
+
+public class Test {
+    
+    
+     /* Returns true if cha1 and cha2
+       are matching left and right Parenthesis */
+    static boolean isMatchingPair(char ch1, char ch2)
+    {
+       if (ch1 == '(' && ch2 == ')')
+         return true;
+       else if (ch1 == '{' && ch2 == '}')
+         return true;
+       else if (ch1 == '[' && ch2 == ']')
+         return true;
+       else
+         return false;
+    }
+    
+    static boolean areParantisisBalance(char code[]){
+        
+       Stack st = new Stack();
+    
+    
+        for(int i=0; i<code.length;i++){
+            
+            if(code[i]=='{' || code[i]=='(' || code[i]=='[')
+            {
+                st.push(code[i]);
+            }
+             if(code[i]=='}' || code[i]==')' || code[i]==']')
+            {
+                Test.isMatchingPair((char)st.pop(),code[i]);
+            }
+            
+            if(st.isEmpty()) return false ;
+            
+            
+        }
+
+      return true;        
+    }
+
+    
+    
+    
+    
+    
+    
+    public static String reverseString(String str){
+        int size =str.length(); 
+        String rvs="";
+        Stack newStack = new Stack(size); // Declaring an empty stack
+        
+        for(int i=0;i<size;i++){
+            char a = str.charAt(i); //pushing every character into the stack
+            newStack.push(a);
+        }
+         for(int i=0;i<size;i++){
+           rvs+=newStack.pop(); //poping out all the characters in a first in last out fashion.
+        }
+        
+        return rvs;
+        
+    }
+    
+    
+   
+    
+    
+    public static void main(String args[]){
+        
+        
+        char exp[] = {'{','(',')','}','[',']'};
+          if (areParantisisBalance(exp))
+            System.out.println("Balanced ");
+          else
+            System.out.println("Not Balanced ");  
+  
+    
+    }
+    
+    
+    
+}
+
+
+    
+    
+
+    
+    
+    
+    
+    
