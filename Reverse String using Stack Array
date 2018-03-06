@@ -5,7 +5,7 @@ public class Test {
     public static String reverseString(String str){
         int size =str.length();
         String rvs="";
-        Stack newStack = new Stack(size); // Here I am using the Generic Stack method I created on a before example on this repo.
+        Stack newStack = new Stack(size); // Here I am using the Generic Stack method I created on a before example of this repo.
         
         for(int i=0;i<size;i++){
             char a = str.charAt(i);
@@ -21,7 +21,7 @@ public class Test {
     
     public static void main(String args[]){
   
-        Stack score = new Stack(5); // Here I am using the Generic Stack method I created on a before example on this repo
+        Stack score = new Stack(5); // Here I am using the Generic Stack method I created on a before example of this repo
         score.push(12);
         score.push(22);
         score.push(32);
