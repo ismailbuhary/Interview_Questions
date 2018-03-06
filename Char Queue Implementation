@@ -1,0 +1,53 @@
+class Queue{
+ 
+ private int maxSize;
+ private int front;
+ private int rear;
+ private int nItems;
+ private char[] queueArray;
+ 
+ 
+ Queue(int size){
+     this.rear=-1;
+     this.front=0;
+     this.maxSize=size;
+     this.queueArray = new char[size];
+ }
+ 
+ public void insert(char str){
+     rear++;
+     queueArray[rear]=str;
+     nItems++;
+     
+ }
+ 
+ public char peekFront(){
+  return queueArray[front];
+ }
+ 
+ public char remove(){
+  char temp= queueArray[front];
+   front++;
+    if(isEmpty()){
+        front =0; //set front to the 0th index
+        return temp;
+    } 
+    nItems--;
+    return queueArray[front];
+ }
+ 
+ public boolean isEmpty(){
+     if(nItems==maxSize){
+        return true;
+     }
+    else return false;
+ }
+ 
+ public void printQueue(){
+     for(int i=front;i<maxSize;i++){
+         System.out.println(queueArray[i]);
+     }
+ }
+ 
+}
+    
