@@ -1,0 +1,40 @@
+import java.lang.String;
+public class Test {
+    
+    
+    public static String reverseString(String str){
+        int size =str.length();
+        String rvs="";
+        Stack newStack = new Stack(size);
+        
+        for(int i=0;i<size;i++){
+            char a = str.charAt(i);
+            newStack.push(a);
+        }
+         for(int i=0;i<size;i++){
+           rvs+=newStack.pop();
+        }
+        
+        return rvs;
+        
+    }
+    
+    public static void main(String args[]){
+  
+        Stack score = new Stack(5);
+        score.push(12);
+        score.push(22);
+        score.push(32);
+        score.push(42);
+        score.pop();
+       score.printStack();
+       System.out.println(reverseString("Buhary123"));
+    }
+    
+    
+    
+}
+
+
+    
+    
