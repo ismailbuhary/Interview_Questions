@@ -1,0 +1,51 @@
+/*You are provided a string containing postive integers separated by space. you take that as input and then sort numbers in ascending order of their weight.
+Weight of a number refers to sum of digits in the number. If weight of two numbers are equal they should be considered as string and sorted as string.
+Print the output as a String of concatenated numbers with spaces.
+String str = "56 65 74 100 99 68 86 180 90";
+
+100 180 90 56 65 74 68 86 99
+
+
+*/
+
+int[] selectionSort(int[] Ary){
+for(int i=0;i<Ary.length;i++){
+
+int newMinimum = i;
+int temp = Ary[i];
+for(int j=i+1;j<Ary.length;j++)
+{
+
+        if(Ary[j]<Ary[newMinimum]){
+        newMinimum=j;
+        }
+        
+        Ary[i]=Ary[newMinimum];
+       Ary[newMinimum]=temp;
+}
+}
+
+
+}
+
+
+
+String str ="56 65 74 100 99 68 86 180 90"
+
+
+int[] numberArray=new int[9];
+int[] finalArray = new int[9];
+
+
+int[] numArray = Arrays.stream((strArray.split(" "))
+    .mapToInt(Integer::parseInt)
+    .toArray();
+    
+ for(int i; i<numArray.length;i++){ 
+finalArray[i]= (numArray[i]/10)+(numArray[i]%10);
+
+}
+    
+selectionSort(finalArray);
+
+
