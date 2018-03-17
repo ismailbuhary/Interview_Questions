@@ -46,6 +46,6 @@ finalArray[i]= (numArray[i]/10)+(numArray[i]%10);
 
 }
     
-selectionSort(finalArray);
+String str =Array.toString(selectionSort(finalArray));
 
-
+System.out.println(str);
