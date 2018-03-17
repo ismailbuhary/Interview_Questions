@@ -24,7 +24,7 @@ for(int j=i+1;j<Ary.length;j++)
        Ary[newMinimum]=temp;
 }
 }
-
+return Ary;
 
 }
 
