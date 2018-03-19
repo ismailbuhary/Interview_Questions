@@ -1,4 +1,5 @@
-/*The factorial of the integer , written , is defined as:
+/*The factorial of the integer , written , is defined as: n! =nX(n-1)X(n-2)X(n-3)....X3X2X1
+
 Calculate and print the factorial of a given integer.
 Note: Factorials of  can't be stored even in a  long long variable. Big integers must be used for such calculations. Languages like Java, Python, Ruby etc. can handle big integers, but we need to write additional code in C/C++ to handle huge values.
 */
