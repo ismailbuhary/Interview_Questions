@@ -1,0 +1,30 @@
+/*The factorial of the integer , written , is defined as:
+Calculate and print the factorial of a given integer.
+Note: Factorials of  can't be stored even in a  long long variable. Big integers must be used for such calculations. Languages like Java, Python, Ruby etc. can handle big integers, but we need to write additional code in C/C++ to handle huge values.
+*/
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    static void extraLongFactorials(int n) {
+     BigInteger bin = new BigInteger("1");
+        BigInteger inc = new BigInteger("1");
+        for(long i=0; i<n;i++){
+           bin = bin.multiply(inc);
+      inc = inc.add(BigInteger.ONE);
+        }
+    System.out.println(bin);
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        extraLongFactorials(n);
+        in.close();
+    }
+}
+
