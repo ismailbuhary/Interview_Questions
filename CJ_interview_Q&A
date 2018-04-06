@@ -1,0 +1,107 @@
+/**
+
+Largest two numbers
+
+    Given at least two numbers
+    Return the largest and second largest of the numbers
+    Presume that the input has already been verified as valid
+    In this case, valid means
+        all elements are numbers
+        we have at least 2 numbers
+    performance constraints
+        time: We must do this in O(n) time or better, so no sorting
+        space: We might have to deal with very large lists of numbers, so no copying the entire list
+    design constraints
+        your code should not modify the original input
+
+Examples:
+
+    If your numbers are: 1 5 3 7
+    The two biggest are: 7 5
+    If your numbers are: 2 9 9 2
+    The two biggest are: 9 9
+
+Guidelines
+
+    This is your show, implement it the way you think it should be implemented, don't try to guess what we think you should do.
+    Be prepared to explain your reasoning.
+    We are interested in your thinking process, not how well you have memorized the language and libraries, so if you forget some syntax or library detail, just ask.
+    Don't over-think the problem, we are not trying to trick you, it really is this simple.
+    The important thing is that you get it working first, so don't worry about being messy at first, we can always refactor later.
+**/
+
+import java.io.*;
+import java.util.*;
+import org.junit.*;
+import org.junit.runner.*;
+/*
+ * To execute Java, please define "static void main" on a class
+ * named Solution.
+ *
+ * If you need more classes, simply define them inline.
+ */
+
+public class Solution {
+  
+  
+   @Test
+    public  void testNoop() {
+       int[] answer = MaxTwoNumber(new int[] {1,5,3,7});
+      Assert.assertEquals(answer[0], 7);
+    Assert.assertEquals(answer[1], 5);
+  
+    }
+  
+  
+     @Test
+    public  void anotherTest() {
+       int[] answer = MaxTwoNumber(new int[] {2,9,9,2});
+      Assert.assertEquals(answer[0], 9);
+    Assert.assertEquals(answer[1], 9);
+  
+    }
+  
+  
+       @Test
+    public  void yestNegatives() {
+       int[] answer = MaxTwoNumber(new int[] {-3,9,9,2});
+      Assert.assertEquals(answer[0], 9);
+    Assert.assertEquals(answer[1], 9);
+  
+    }
+  
+  public int[]  MaxTwoNumber(int[] array){
+    
+    int FirstMax =0;
+    int SecondMax =0;
+    int[] returnArray= new int[2];
+    
+    for(int current:array){
+      
+          if(FirstMax<current){
+          SecondMax = FirstMax;
+            FirstMax=current;
+
+
+          }
+      
+      
+          else if(SecondMax<current)
+          {
+             SecondMax=current;
+          }
+      
+      
+   }
+    
+   returnArray[0]= FirstMax;
+   returnArray[1]=SecondMax;
+    return returnArray;
+    
+  }
+  
+  public static void main(String[] args) {
+      JUnitCore.main("Solution");
+  }
+ 
+}
