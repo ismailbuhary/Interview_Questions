@@ -100,6 +100,101 @@ public class Solution {
     
   }
   
+  
+  
+  
+/* 
+Design a sketch for a Card game app :
+
+
+
+class Card{
+
+
+propeties and methods
+count;
+
+}
+
+
+ class Deck{
+
+Card st;
+st.count =50;
+
+sington
+
+suffle(st){
+
+
+}
+
+sort(){
+
+}
+
+removeCard(){
+}
+
+
+
+
+
+
+
+}
+
+
+class Hand {
+
+can have mutiple Card;
+
+
+instatiate a object from the Deck
+
+dk.Stack
+
+distribute(){
+cdcd
+
+}
+
+takeCard(){
+
+
+id compire(Hand cardsarray){
+
+for(card:cards){
+this.object.card is equal
+}
+
+
+
+}
+
+
+return -1
+}
+
+addCard
+
+}
+
+
+
+class player{
+
+Deck hand = new Deck();
+
+
+}
+
+
+
+client
+
+**/
+  
   public static void main(String[] args) {
       JUnitCore.main("Solution");
   }
