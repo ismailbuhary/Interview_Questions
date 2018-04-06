@@ -99,7 +99,12 @@ public class Solution {
     return returnArray;
     
   }
-  
+   public static void main(String[] args) {
+      JUnitCore.main("Solution");
+  }
+ 
+}
+
   
   
   
@@ -195,8 +200,4 @@ client
 
 **/
   
-  public static void main(String[] args) {
-      JUnitCore.main("Solution");
-  }
  
-}
